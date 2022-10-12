@@ -4,10 +4,12 @@
 	参考URL: https://qiita.com/satken2/items/10b22bed7a331e425cfe
 ### What is Container Technology?
 	コンテナとは、端的に言えばアプリケーションをホストOSから隔離する技術のことである。LinuxOSの中に隔離された空間を作り、他のコンテナ内のプロセスやホストOS上のプロセスに一切干渉せずに動作できる環境を作る。  
-	参考URL: https://qiita.com/satken2/items/10b22bed7a331e425cfe
+参考URL:  
+	https://qiita.com/satken2/items/10b22bed7a331e425cfe
 ### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
-	参考URL: https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a
+参考URL:  
+	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a
 
 ### What is this subject ? 
 	Use docker-compose to create LEMP ( L:Linux E:Nginx M:Mariadb P:Apache ) stack with Wordpress
@@ -47,8 +49,11 @@
 	https://hnavi.co.jp/knowledge/blog/nginx/#title1  
 	https://qiita.com/morrr/items/929e9cb35914a7f3a652  
 	https://qiita.com/morrr/items/7c97f0d2e46f7a8ec967  
+	https://heartbeats.jp/hbblog/2012/06/nginx06.html  
+	http://www2.matsue-ct.ac.jp/home/kanayama/text/nginx/node36.html
+
 
 ### debian memo
 - 「/etc/hosts」ファイルは、ホスト名とIPアドレスを対応させるためのファイル  
-** What is PORT 80? **
+**What is PORT 80?**
 	80番ポートとは、インターネットなどの通信でアプリケーションの種類や通信規約（プロトコル）の識別に用いられるポート番号の一つ。 通常はTCPの80番をWebサーバがHTTPでWebブラウザなどと通信するために用いる。  
