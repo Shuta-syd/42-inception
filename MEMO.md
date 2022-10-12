@@ -1,7 +1,8 @@
 ### What is Docker?
 	Dockerとはコンテナ技術を使用して、アプリケーションの環境構築を容易にするオープンソースソフトウェア。  
 	ミドルウェアのインストールや各種環境設定をコード化して管理でき、共有などが容易になる。  
-	参考URL: https://qiita.com/satken2/items/10b22bed7a331e425cfe
+参考URL:  
+	https://qiita.com/satken2/items/10b22bed7a331e425cfe
 ### What is Container Technology?
 	コンテナとは、端的に言えばアプリケーションをホストOSから隔離する技術のことである。LinuxOSの中に隔離された空間を作り、他のコンテナ内のプロセスやホストOS上のプロセスに一切干渉せずに動作できる環境を作る。  
 参考URL:  
@@ -55,5 +56,5 @@
 
 ### debian memo
 - 「/etc/hosts」ファイルは、ホスト名とIPアドレスを対応させるためのファイル  
-**What is PORT 80?**
+**What is PORT 80?**  
 	80番ポートとは、インターネットなどの通信でアプリケーションの種類や通信規約（プロトコル）の識別に用いられるポート番号の一つ。 通常はTCPの80番をWebサーバがHTTPでWebブラウザなどと通信するために用いる。  
