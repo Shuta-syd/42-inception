@@ -18,13 +18,27 @@
 3. 
 
 参考URL:  
-	https://docs.docker.jp/compose/environment-variables.html#env
-	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04
-	https://betterprogramming.pub/using-variables-in-docker-compose-265a604c2006
-	https://medium.com/edureka/docker-networking-1a7d65e89013
-	https://faun.pub/docker-networks-part-1-of-2-15a986a48d0a
-	https://www.debian.org/releases/buster/
-	https://knowledge.sakura.ad.jp/26522/
+	https://docs.docker.jp/compose/environment-variables.html#env  
+	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04  
+	https://betterprogramming.pub/using-variables-in-docker-compose-265a604c2006  
+	https://medium.com/edureka/docker-networking-1a7d65e89013  
+	https://faun.pub/docker-networks-part-1-of-2-15a986a48d0a  
+	https://www.debian.org/releases/buster/  
+	https://knowledge.sakura.ad.jp/26522/  
+
+### What is SSL??
+	SSL（Secure Socket Layer）/ TLS（Transport Layer Security）は、通信の暗号化、改ざん検知、通信相手の認証を行う仕組みです。現在はプロトコルとしては主にTLSが使われていますが、慣例的にTLSのことも含めてSSLと総称されています。  
+
+### What is Public Key Infrastructure?
+	公開鍵と秘密鍵のキーペアからなる「公開鍵暗号方式」という技術を利用し、インターネット上で安全に情報のやりとりを行うセキュリティのインフラ。
+
+### What is common key crypto system?
+	共通鍵暗号方式とは、暗号化するための鍵とそれを復号するための鍵に同じものを使用する方式で、暗号化した際に使用した鍵は、復号する際にも必要になります。
+
+参照URL:  
+	https://college.globalsign.com/ssl-pki-info/ssl-encryptions/  
+	https://college.globalsign.com/ssl-pki-info/pki/  
+	https://qiita.com/k_kind/items/b87777efa3d29dcc4467
 
 ### debian memo
 - 「/etc/hosts」ファイルは、ホスト名とIPアドレスを対応させるためのファイル  
