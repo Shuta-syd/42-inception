@@ -40,6 +40,14 @@
 	https://college.globalsign.com/ssl-pki-info/pki/  
 	https://qiita.com/k_kind/items/b87777efa3d29dcc4467
 
+### What is nginx ?
+	Webサーバとは、Webシステム上で、利用者側のコンピュータに対しネットワークを通じて情報や機能を提供するコンピュータおよびソフトウェアのこと。そして「Nginx」はWebサイトを公開・管理する際に使われるサーバソフトウェア、「Webサーバ」の1種。
+
+参考URL:  
+	https://hnavi.co.jp/knowledge/blog/nginx/#title1  
+	https://qiita.com/morrr/items/929e9cb35914a7f3a652  
+	https://qiita.com/morrr/items/7c97f0d2e46f7a8ec967  
+
 ### debian memo
 - 「/etc/hosts」ファイルは、ホスト名とIPアドレスを対応させるためのファイル  
 ** What is PORT 80? **
