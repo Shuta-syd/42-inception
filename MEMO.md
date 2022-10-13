@@ -15,7 +15,6 @@
 		https://www.youtube.com/watch?v=LQjaJINkQXY
 		https://qiita.com/sky0621/items/d837c566b04464469fdb
 		https://docs.docker.jp/engine/reference/builder.html#cmd
-		https://tottoto-toto.hatenablog.com/
 
 ### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
@@ -63,6 +62,13 @@
 	https://qiita.com/morrr/items/7c97f0d2e46f7a8ec967  
 	https://heartbeats.jp/hbblog/2012/06/nginx06.html  
 	http://www2.matsue-ct.ac.jp/home/kanayama/text/nginx/node36.html
+	https://tottoto-toto.hatenablog.com/
+	https://github.com/nginxinc/docker-nginx/blob/master/mainline/alpine/Dockerfile
+	https://nginx.org/en/docs/switches.html
+	https://nginx.org/en/docs/ngx_core_module.html#daemon
+	https://www.web-dev-qa-db-ja.com/ja/nginx/
+	https://stackoverflow.com/questions/25970711/what-is-the-difference-between-nginx-daemon-on-off-option
+	
 
 
 ### debian memo
