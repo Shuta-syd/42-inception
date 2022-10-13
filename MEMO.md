@@ -12,17 +12,17 @@
 	Dockerfileとは、新規にDockerイメージを作成するための手順を記したテキストファイル。Dockerイメージの設計図。Dockerfileは独自のDSL（ドメイン固有言語）。  
 
 参考URL:  
-	https://y-ohgi.com/introduction-docker/2_component/dockerfile/
-	https://www.youtube.com/watch?v=LQjaJINkQXY
-	https://qiita.com/sky0621/items/d837c566b04464469fdb
-	https://docs.docker.jp/engine/reference/builder.html#cmd
+	https://y-ohgi.com/introduction-docker/2_component/dockerfile/  
+	https://www.youtube.com/watch?v=LQjaJINkQXY  
+	https://qiita.com/sky0621/items/d837c566b04464469fdb  
+	https://docs.docker.jp/engine/reference/builder.html#cmd  
 
 ### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
 
 参考URL:  
-	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a
-	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04
+	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a  
+	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04  
 
 ### What is this subject ? 
 	Use docker-compose to create LEMP ( L:Linux E:Nginx M:Mariadb P:Apache ) stack with Wordpress
@@ -53,7 +53,7 @@
 参照URL:  
 	https://college.globalsign.com/ssl-pki-info/ssl-encryptions/  
 	https://college.globalsign.com/ssl-pki-info/pki/  
-	https://qiita.com/k_kind/items/b87777efa3d29dcc4467
+	https://qiita.com/k_kind/items/b87777efa3d29dcc4467  
 
 ### What is nginx ?
 	Webサーバとは、Webシステム上で、利用者側のコンピュータに対しネットワークを通じて情報や機能を提供するコンピュータおよびソフトウェアのこと。そして「Nginx」はWebサイトを公開・管理する際に使われるサーバソフトウェア、「Webサーバ」の1種。
@@ -63,13 +63,13 @@
 	https://qiita.com/morrr/items/929e9cb35914a7f3a652  
 	https://qiita.com/morrr/items/7c97f0d2e46f7a8ec967  
 	https://heartbeats.jp/hbblog/2012/06/nginx06.html  
-	http://www2.matsue-ct.ac.jp/home/kanayama/text/nginx/node36.html
-	https://tottoto-toto.hatenablog.com/
-	https://github.com/nginxinc/docker-nginx/blob/master/mainline/alpine/Dockerfile
-	https://nginx.org/en/docs/switches.html
-	https://nginx.org/en/docs/ngx_core_module.html#daemon
-	https://www.web-dev-qa-db-ja.com/ja/nginx/
-	https://stackoverflow.com/questions/25970711/what-is-the-difference-between-nginx-daemon-on-off-option
+	http://www2.matsue-ct.ac.jp/home/kanayama/text/nginx/node36.html  
+	https://tottoto-toto.hatenablog.com/  
+	https://github.com/nginxinc/docker-nginx/blob/master/mainline/alpine/Dockerfile  
+	https://nginx.org/en/docs/switches.html  
+	https://nginx.org/en/docs/ngx_core_module.html#daemon  
+	https://www.web-dev-qa-db-ja.com/ja/nginx/  
+	https://stackoverflow.com/questions/25970711/what-is-the-difference-between-nginx-daemon-on-off-option  
 	
 
 
