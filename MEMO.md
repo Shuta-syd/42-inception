@@ -23,6 +23,7 @@
 参考URL:  
 	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a  
 	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04  
+	https://amateur-engineer-blog.com/docer-compose-volumes/  
 
 ### What is this subject ? 
 	Use docker-compose to create LEMP ( L:Linux E:Nginx M:Mariadb P:Apache ) stack with Wordpress
@@ -41,7 +42,7 @@
 	https://www.debian.org/releases/buster/  
 	https://knowledge.sakura.ad.jp/26522/  
 
-### What is SSL??
+### What is SSL?
 	SSL（Secure Socket Layer）/ TLS（Transport Layer Security）は、通信の暗号化、改ざん検知、通信相手の認証を行う仕組みです。現在はプロトコルとしては主にTLSが使われていますが、慣例的にTLSのことも含めてSSLと総称されています。  
 
 ### What is Public Key Infrastructure?
@@ -70,7 +71,16 @@
 	https://nginx.org/en/docs/ngx_core_module.html#daemon  
 	https://www.web-dev-qa-db-ja.com/ja/nginx/  
 	https://stackoverflow.com/questions/25970711/what-is-the-difference-between-nginx-daemon-on-off-option  
-	
+	https://heartbeats.jp/hbblog/2012/04/nginx05.html  
+	https://www.educba.com/nginx-add_header/  
+
+### What is PHP-FPM?
+	FPM ( FastCGI Process Manager ) は PHP の FastCGI 実装のひとつで、 主に高負荷のサイトで有用な追加機能を用意しています。FastCGIとは、Webサーバ上でユーザプログラムを動作させるためのインタフェース仕様の一つである。 CGIの問題を解決するために Open Market社によって1990年代中頃に開発された[1]もので、プロトコルは公開されている。
+参考URL:  
+	https://qiita.com/kotarella1110/items/634f6fafeb33ae0f51dc  
+	https://murashun.jp/article/programming/regular-expression.html  
+
+
 
 
 ### debian memo
