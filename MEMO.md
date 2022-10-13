@@ -7,10 +7,16 @@
 	コンテナとは、端的に言えばアプリケーションをホストOSから隔離する技術のことである。LinuxOSの中に隔離された空間を作り、他のコンテナ内のプロセスやホストOS上のプロセスに一切干渉せずに動作できる環境を作る。  
 参考URL:  
 	https://qiita.com/satken2/items/10b22bed7a331e425cfe
+
+### What is Dockerfile?
+	Dockerfileとは、新規にDockerイメージを作成するための手順を記したテキストファイル。Dockerイメージの設計図。Dockerfileは独自のDSL（ドメイン固有言語）。  
+	参考URL:
+		https://y-ohgi.com/introduction-docker/2_component/dockerfile/
 ### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
 参考URL:  
 	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a
+	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04
 
 ### What is this subject ? 
 	Use docker-compose to create LEMP ( L:Linux E:Nginx M:Mariadb P:Apache ) stack with Wordpress
