@@ -12,6 +12,11 @@
 	Dockerfileとは、新規にDockerイメージを作成するための手順を記したテキストファイル。Dockerイメージの設計図。Dockerfileは独自のDSL（ドメイン固有言語）。  
 	参考URL:
 		https://y-ohgi.com/introduction-docker/2_component/dockerfile/
+		https://www.youtube.com/watch?v=LQjaJINkQXY
+		https://qiita.com/sky0621/items/d837c566b04464469fdb
+		https://docs.docker.jp/engine/reference/builder.html#cmd
+		https://tottoto-toto.hatenablog.com/
+
 ### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
 参考URL:  
@@ -63,4 +68,10 @@
 ### debian memo
 - 「/etc/hosts」ファイルは、ホスト名とIPアドレスを対応させるためのファイル  
 **What is PORT 80?**  
-	80番ポートとは、インターネットなどの通信でアプリケーションの種類や通信規約（プロトコル）の識別に用いられるポート番号の一つ。 通常はTCPの80番をWebサーバがHTTPでWebブラウザなどと通信するために用いる。  
+	TCPの80番をWebサーバがHTTPでWebブラウザなどと通信するために用いる。  
+**What is PORT 443?**  
+	TCPの443番をWebサーバがHTTPSでWebブラウザなどと通信するために用いる。  
+### alpine memo
+- パッケージマネージャー apk  
+参考URL:
+	https://blog.stormcat.io/post/entry/alpine-entry-apk/
