@@ -10,14 +10,16 @@
 
 ### What is Dockerfile?
 	Dockerfileとは、新規にDockerイメージを作成するための手順を記したテキストファイル。Dockerイメージの設計図。Dockerfileは独自のDSL（ドメイン固有言語）。  
-	参考URL:
-		https://y-ohgi.com/introduction-docker/2_component/dockerfile/
-		https://www.youtube.com/watch?v=LQjaJINkQXY
-		https://qiita.com/sky0621/items/d837c566b04464469fdb
-		https://docs.docker.jp/engine/reference/builder.html#cmd
+
+参考URL:
+	https://y-ohgi.com/introduction-docker/2_component/dockerfile/
+	https://www.youtube.com/watch?v=LQjaJINkQXY
+	https://qiita.com/sky0621/items/d837c566b04464469fdb
+	https://docs.docker.jp/engine/reference/builder.html#cmd
 
 ### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
+
 参考URL:  
 	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a
 	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04
