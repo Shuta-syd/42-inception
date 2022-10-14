@@ -80,6 +80,13 @@
 	https://owlhowto.com/how-to-fix-unexpected-end-of-file-expecting-on-nginx/  
 	https://yinm.hatenadiary.jp/entry/2017/05/04/220439  
 
+### What is MariaDB?
+	MariaDBは世界でもっとも普及しているオープンソースのRDBMSであるMySQLから派生したレーショナルデータベースです。MySQLのソースコードをベースにして、新機能追加やソースコードの改善が組み込まれています。MariaDBは完全なるGPLライセンスですが、MySQLはデュアルライセンスで提供されている。 それぞれ異なる方法でスレッドプールを提供している。 MariaDBは複数のストレージエンジンに対応している。 多くのケースで、MariaDBの方が高い性能を誇る。
+**What is mariadb-client?**  
+	MariaDBデータベースのクライアントアプリケーションである「mysql」を使えるようにする「mariadb-client」ソフトウェア  
+参考URL:  
+	https://www.naka-sys.okinawa/docker-mariadb-container-create/#st-toc-h-2  
+
 ### What is PHP-FPM?
 	FPM ( FastCGI Process Manager ) は PHP の FastCGI 実装のひとつで、 主に高負荷のサイトで有用な追加機能を用意しています。FastCGIとは、Webサーバ上でユーザプログラムを動作させるためのインタフェース仕様の一つである。 CGIの問題を解決するために Open Market社によって1990年代中頃に開発された[1]もので、プロトコルは公開されている。
 参考URL:  
