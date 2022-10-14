@@ -2,7 +2,8 @@
 	Dockerとはコンテナ技術を使用して、アプリケーションの環境構築を容易にするオープンソースソフトウェア。  
 	ミドルウェアのインストールや各種環境設定をコード化して管理でき、共有などが容易になる。  
 参考URL:  
-	https://qiita.com/satken2/items/10b22bed7a331e425cfe
+	https://qiita.com/satken2/items/10b22bed7a331e425cfe  
+	https://ysko909.github.io/posts/docker-container-gets-into-restarting-loop/  
 ### What is Container Technology?
 	コンテナとは、端的に言えばアプリケーションをホストOSから隔離する技術のことである。LinuxOSの中に隔離された空間を作り、他のコンテナ内のプロセスやホストOS上のプロセスに一切干渉せずに動作できる環境を作る。  
 参考URL:  
@@ -19,7 +20,7 @@
 
 ### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
-
+**docker-compose --build -dすることでDockerfileが反映される**  
 参考URL:  
 	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a  
 	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04  
@@ -76,6 +77,8 @@
 	https://stackoverflow.com/questions/25970711/what-is-the-difference-between-nginx-daemon-on-off-option  
 	https://heartbeats.jp/hbblog/2012/04/nginx05.html  
 	https://www.educba.com/nginx-add_header/  
+	https://owlhowto.com/how-to-fix-unexpected-end-of-file-expecting-on-nginx/  
+	https://yinm.hatenadiary.jp/entry/2017/05/04/220439  
 
 ### What is PHP-FPM?
 	FPM ( FastCGI Process Manager ) は PHP の FastCGI 実装のひとつで、 主に高負荷のサイトで有用な追加機能を用意しています。FastCGIとは、Webサーバ上でユーザプログラムを動作させるためのインタフェース仕様の一つである。 CGIの問題を解決するために Open Market社によって1990年代中頃に開発された[1]もので、プロトコルは公開されている。
