@@ -24,6 +24,9 @@
 	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a  
 	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04  
 	https://amateur-engineer-blog.com/docer-compose-volumes/  
+	https://zenn.dev/suiudou/articles/3b32a846655aef  
+	https://qiita.com/sam8helloworld/items/e7fffa9afc82aea68a7a  
+	https://qiita.com/akido_/items/1cfcea6ed48bae926609  
 
 ### What is this subject ? 
 	Use docker-compose to create LEMP ( L:Linux E:Nginx M:Mariadb P:Apache ) stack with Wordpress
@@ -79,7 +82,12 @@
 参考URL:  
 	https://qiita.com/kotarella1110/items/634f6fafeb33ae0f51dc  
 	https://murashun.jp/article/programming/regular-expression.html  
+	https://53ningen.com/docker-wordpress
 
+### What is proxy?
+	「プロキシ」とは、インターネットを接続する際に、ネットワークの内部から外部へのアクセスを代理で行うシステムのことです。プロキシサーバーとも呼ばれ、企業がサイバー攻撃などに対抗し、自社の情報システムを安全に管理する手段として利用されている。
+参考URL:  
+	https://www.softbanktech.co.jp/special/blog/it-keyword/2022/0030/#content01
 
 
 
