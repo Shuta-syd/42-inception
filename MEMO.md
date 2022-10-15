@@ -4,6 +4,9 @@
 参考URL:  
 	https://qiita.com/satken2/items/10b22bed7a331e425cfe  
 	https://ysko909.github.io/posts/docker-container-gets-into-restarting-loop/  
+	https://zenn.dev/swata_dev/articles/2f85a3f4b3022c
+	https://mebee.info/2020/03/26/post-8053/
+
 ### What is Container Technology?
 	コンテナとは、端的に言えばアプリケーションをホストOSから隔離する技術のことである。LinuxOSの中に隔離された空間を作り、他のコンテナ内のプロセスやホストOS上のプロセスに一切干渉せずに動作できる環境を作る。  
 参考URL:  
@@ -84,15 +87,33 @@
 	MariaDBは世界でもっとも普及しているオープンソースのRDBMSであるMySQLから派生したレーショナルデータベースです。MySQLのソースコードをベースにして、新機能追加やソースコードの改善が組み込まれています。MariaDBは完全なるGPLライセンスですが、MySQLはデュアルライセンスで提供されている。 それぞれ異なる方法でスレッドプールを提供している。 MariaDBは複数のストレージエンジンに対応している。 多くのケースで、MariaDBの方が高い性能を誇る。
 **What is mariadb-client?**  
 	MariaDBデータベースのクライアントアプリケーションである「mysql」を使えるようにする「mariadb-client」ソフトウェア  
+**What is PORT 3306?**
+	MySQLサーバーをデフォルト設定でインストールした場合に、接続のTCPポートは、3306になります。 この3306ポートは、特に何もしていない場合に、サーバーとして使用しているパソコンやサーバーが、他のマシンからのホストを遮断する設定になっています。    
 参考URL:  
 	https://www.naka-sys.okinawa/docker-mariadb-container-create/#st-toc-h-2  
+	https://mariadb.com/kb/en/creating-a-custom-docker-image/  
+	https://mseeeen.msen.jp/init-with-subdirectory-sql-files-with-mysql-docker/  
+	https://gist.github.com/tomoh1r/9f2bdd05169a2f9af25d  
+	https://chienomi.org/archives/livewithlinux/1282  
+	https://blog.turai.work/entry/20161011/1476170075  
+	https://dev.mysql.com/doc/refman/5.6/ja/mysql-install-db.html  
+	http://www.momobro.com/rasbro/rp-make-db/  
+	
 
 ### What is PHP-FPM?
 	FPM ( FastCGI Process Manager ) は PHP の FastCGI 実装のひとつで、 主に高負荷のサイトで有用な追加機能を用意しています。FastCGIとは、Webサーバ上でユーザプログラムを動作させるためのインタフェース仕様の一つである。 CGIの問題を解決するために Open Market社によって1990年代中頃に開発された[1]もので、プロトコルは公開されている。
+**what is fastcgi?**  
+	役割はCGIと同じだけど、Webサーバ上で動くプログラムを一度起動したらしばらく待機させることによって、プログラムの開始と終了にかかる手間を減らし、動きを速くしたりWebサーバの負荷を軽減することができる仕組み  
 参考URL:  
 	https://qiita.com/kotarella1110/items/634f6fafeb33ae0f51dc  
 	https://murashun.jp/article/programming/regular-expression.html  
 	https://53ningen.com/docker-wordpress
+	https://kinsta.com/jp/knowledgebase/what-is-php/ 
+	https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose  
+	https://make.wordpress.org/hosting/handbook/server-environment/  
+
+### Wha ¥t is MySQL?
+	MySQLiとは「MySQL improved extension」の略で、PHPからMySQL/MariaDBデータベースを操作するためのインターフェースを提供する、PHPの拡張機能です。
 
 ### What is proxy?
 	「プロキシ」とは、インターネットを接続する際に、ネットワークの内部から外部へのアクセスを代理で行うシステムのことです。プロキシサーバーとも呼ばれ、企業がサイバー攻撃などに対抗し、自社の情報システムを安全に管理する手段として利用されている。
