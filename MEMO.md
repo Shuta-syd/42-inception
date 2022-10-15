@@ -69,6 +69,19 @@
 nginxに関する設定ファイル  
 **location directive**  
 locationディレクティブは、任意のURI毎に異なる設定をするためのもの  
+**fastcgi_params**  
+phpに渡すパラメータに関する設定ファイル  
+**fast_split_path_info ^(.+\.php)(/.+)$**  
+./test.php/article/1 のようなURIを実行するファイル名($fastcgi_script_name)と#phpに渡すパス情報パラメータ($fastcgi_path_info)に分割  
+**fastcgi_params SCRIPT_FILENAME $document_root$fastcgi_script_name**  
+実行するスクリプトのパスをルートディレクトリ/実行するファイル名 にする  
+**fastcgi_param PATH_INFO $fastcgi_path_info**  
+パス情報パラメータ  
+
+参考URL:  
+https://mogile.web.fc2.com/nginx_wiki/nginx_wiki201510/start/topics/examples/phpfcgi.html  
+zenn.dev/nananaoto/articles/c419d9afc9b03e5e3efb#オブジェクトのアップロード  
+https://shiro-secret-base.com/?p=468#PHP-fpm-2  
 
 参考URL:  
 	https://hnavi.co.jp/knowledge/blog/nginx/#title1  
