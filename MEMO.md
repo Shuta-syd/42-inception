@@ -65,6 +65,10 @@
 
 ### What is nginx ?
 	Webサーバとは、Webシステム上で、利用者側のコンピュータに対しネットワークを通じて情報や機能を提供するコンピュータおよびソフトウェアのこと。そして「Nginx」はWebサイトを公開・管理する際に使われるサーバソフトウェア、「Webサーバ」の1種。
+**nginx.conf**  
+nginxに関する設定ファイル  
+**location directive**  
+locationディレクティブは、任意のURI毎に異なる設定をするためのもの  
 
 参考URL:  
 	https://hnavi.co.jp/knowledge/blog/nginx/#title1  
