@@ -110,12 +110,15 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 	https://blog.turai.work/entry/20161011/1476170075  
 	https://dev.mysql.com/doc/refman/5.6/ja/mysql-install-db.html  
 	http://www.momobro.com/rasbro/rp-make-db/  
+	https://qiita.com/kazuyoshikakihara/items/f0c5158c700bb7a5df9f  
+	https://wenchma.github.io/2015/06/30/Build-self-customized-MariaDB-Docker-image-from-Dockerfile.html  
 	
 
 ### What is PHP-FPM?
 	FPM ( FastCGI Process Manager ) は PHP の FastCGI 実装のひとつで、 主に高負荷のサイトで有用な追加機能を用意しています。FastCGIとは、Webサーバ上でユーザプログラムを動作させるためのインタフェース仕様の一つである。 CGIの問題を解決するために Open Market社によって1990年代中頃に開発された[1]もので、プロトコルは公開されている。
 **what is fastcgi?**  
 	役割はCGIと同じだけど、Webサーバ上で動くプログラムを一度起動したらしばらく待機させることによって、プログラムの開始と終了にかかる手間を減らし、動きを速くしたりWebサーバの負荷を軽減することができる仕組み  
+**what is www.conf?**
 参考URL:  
 	https://qiita.com/kotarella1110/items/634f6fafeb33ae0f51dc  
 	https://murashun.jp/article/programming/regular-expression.html  
@@ -123,8 +126,14 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 	https://kinsta.com/jp/knowledgebase/what-is-php/ 
 	https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose  
 	https://make.wordpress.org/hosting/handbook/server-environment/  
+	http://www.ajisaba.net/php/php-fpm/php74-fpm_conf.html  
 
-### Wha ¥t is MySQL?
+### What is wp-config.php?
+	wp-config.php ファイルは WordPress のインストールを行う上で最も重要なファイルの一つです。このファイルは WordPress のファイルディレクトリのルート直下に置かれ、中にはデータベース接続情報などサイトの基礎となる情報の詳細が含まれています。
+参考URL:  
+	https://ja.wordpress.org/support/article/editing-wp-config-php/#:~:text=wp%2Dconfig.php%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AF,%E3%81%8C%E5%90%AB%E3%81%BE%E3%82%8C%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82  
+
+### What is MySQL?
 	MySQLiとは「MySQL improved extension」の略で、PHPからMySQL/MariaDBデータベースを操作するためのインターフェースを提供する、PHPの拡張機能です。
 
 ### What is proxy?
