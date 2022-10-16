@@ -23,7 +23,7 @@
 
 ### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
-**docker-compose --build -dすることでDockerfileが反映される**  
+**docker-compose up --build -dすることでDockerfileが反映される**  
 参考URL:  
 	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a  
 	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04  
@@ -34,11 +34,6 @@
 
 ### What is this subject ? 
 	Use docker-compose to create LEMP ( L:Linux E:Nginx M:Mariadb P:Apache ) stack with Wordpress
-
-### Procedure
-1. 
-2. 
-3. 
 
 参考URL:  
 	https://docs.docker.jp/compose/environment-variables.html#env  
