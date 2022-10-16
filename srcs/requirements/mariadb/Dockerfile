@@ -6,8 +6,4 @@ RUN mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysq
 
 USER mysql
 
-COPY tools/db.sh .
-
-ENTRYPOINT ["sh", "db.sh"]
-
 CMD ["/usr/bin/mysqld", "--skip-log-error"] 
