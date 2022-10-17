@@ -119,6 +119,8 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 **what is fastcgi?**  
 	役割はCGIと同じだけど、Webサーバ上で動くプログラムを一度起動したらしばらく待機させることによって、プログラムの開始と終了にかかる手間を減らし、動きを速くしたりWebサーバの負荷を軽減することができる仕組み  
 **what is www.conf?**
+	php-fpmに関するconfigファイル
+	https://teratail.com/questions/186783
 参考URL:  
 	https://qiita.com/kotarella1110/items/634f6fafeb33ae0f51dc  
 	https://murashun.jp/article/programming/regular-expression.html  
