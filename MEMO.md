@@ -14,7 +14,7 @@
 
 ### What is Dockerfile?
 	Dockerfileとは、新規にDockerイメージを作成するための手順を記したテキストファイル。Dockerイメージの設計図。Dockerfileは独自のDSL（ドメイン固有言語）。  
-
+**Dockerfile内で相対パスを使用する場合、docker-compose.yml build contextで指定したdirからの相対パスを使用する必要がある**  
 参考URL:  
 	https://y-ohgi.com/introduction-docker/2_component/dockerfile/  
 	https://www.youtube.com/watch?v=LQjaJINkQXY  
