@@ -15,6 +15,8 @@
 ### What is Dockerfile?
 	Dockerfileとは、新規にDockerイメージを作成するための手順を記したテキストファイル。Dockerイメージの設計図。Dockerfileは独自のDSL（ドメイン固有言語）。  
 **Dockerfile内で相対パスを使用する場合、docker-compose.yml build contextで指定したdirからの相対パスを使用する必要がある**  
+#### What is difference between CMD and ENTRYPOINT ?
+
 参考URL:  
 	https://y-ohgi.com/introduction-docker/2_component/dockerfile/  
 	https://www.youtube.com/watch?v=LQjaJINkQXY  
@@ -24,6 +26,7 @@
 ### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
 **docker-compose up --build -dすることでDockerfileが反映される**  
+**docker containerはバックグランドでプロセスが走ってないとExit 0で正常終了してしまうため[command: tail -f /dev/null] in docker-compose.ymlで対処が必要**  
 参考URL:  
 	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a  
 	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04  
@@ -31,6 +34,9 @@
 	https://zenn.dev/suiudou/articles/3b32a846655aef  
 	https://qiita.com/sam8helloworld/items/e7fffa9afc82aea68a7a  
 	https://qiita.com/akido_/items/1cfcea6ed48bae926609  
+	https://kaki-note-02.netlify.app/2022/04/07/  
+	https://zenn.dev/hohner/articles/43a0da20181d34  
+	https://zenn.dev/torkralle/articles/388ae878cb5f8b  
 
 ### What is this subject ? 
 	Use docker-compose to create LEMP ( L:Linux E:Nginx M:Mariadb P:Apache ) stack with Wordpress
