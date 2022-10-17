@@ -26,7 +26,7 @@
 ### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
 **docker-compose up --build -dすることでDockerfileが反映される**  
-**docker containerはバックグランドでプロセスが走ってないとExit 0で正常終了してしまうため[command: tail -f /dev/null] in docker-compose.ymlで対処が必要**  
+**docker containerはバックグランドでプロセスが走ってないとExit 0で正常終了してしまうためcommand: tail -f /dev/null**  
 参考URL:  
 	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a  
 	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04  
