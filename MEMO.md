@@ -100,6 +100,8 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 	https://www.educba.com/nginx-add_header/  
 	https://owlhowto.com/how-to-fix-unexpected-end-of-file-expecting-on-nginx/  
 	https://yinm.hatenadiary.jp/entry/2017/05/04/220439  
+	https://www.softbanktech.co.jp/special/blog/it-keyword/2022/0030/#content01  
+	https://www.codeflow.site/ja/article/understanding-and-implementing-fastcgi-proxying-in-nginx  
 
 ### What is MariaDB?
 	MariaDBは世界でもっとも普及しているオープンソースのRDBMSであるMySQLから派生したレーショナルデータベースです。MySQLのソースコードをベースにして、新機能追加やソースコードの改善が組み込まれています。MariaDBは完全なるGPLライセンスですが、MySQLはデュアルライセンスで提供されている。 それぞれ異なる方法でスレッドプールを提供している。 MariaDBは複数のストレージエンジンに対応している。 多くのケースで、MariaDBの方が高い性能を誇る。
@@ -118,6 +120,7 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 	http://www.momobro.com/rasbro/rp-make-db/  
 	https://qiita.com/kazuyoshikakihara/items/f0c5158c700bb7a5df9f  
 	https://wenchma.github.io/2015/06/30/Build-self-customized-MariaDB-Docker-image-from-Dockerfile.html  
+	http://kyamawork.info/post/0007/  
 	
 
 ### What is PHP-FPM?
@@ -146,8 +149,7 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 
 ### What is proxy?
 	「プロキシ」とは、インターネットを接続する際に、ネットワークの内部から外部へのアクセスを代理で行うシステムのことです。プロキシサーバーとも呼ばれ、企業がサイバー攻撃などに対抗し、自社の情報システムを安全に管理する手段として利用されている。
-参考URL:  
-	https://www.softbanktech.co.jp/special/blog/it-keyword/2022/0030/#content01
+
 
 
 
@@ -161,3 +163,9 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 - パッケージマネージャー apk  
 参考URL:
 	https://blog.stormcat.io/post/entry/alpine-entry-apk/
+
+
+### TODO
+- wordpress cliを導入してwordpressのセットアップを行う
+- mariadbでデータベース作成、構成をリサーチ
+- それぞれのコンテナの接続
