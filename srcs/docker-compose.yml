@@ -30,6 +30,7 @@ services:
   container_name: wordpress 
   depends_on:
    - mariadb
+  env_file: .env
   ports:
    - "9000:9000"
   restart: always
