@@ -121,6 +121,10 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 	https://qiita.com/kazuyoshikakihara/items/f0c5158c700bb7a5df9f  
 	https://wenchma.github.io/2015/06/30/Build-self-customized-MariaDB-Docker-image-from-Dockerfile.html  
 	http://kyamawork.info/post/0007/  
+	https://wiki.alpinelinux.org/wiki/OpenRC  
+	https://stackoverflow.com/questions/61483773/how-to-start-a-service-on-alpine-linux  
+	https://gist.github.com/mariotpc/21ee33450e871b3b4c15ca36c24dedc7#file-install-mysql-mariadb-on-alpine-L75  
+	https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql-ja  
 	
 
 ### What is PHP-FPM?
