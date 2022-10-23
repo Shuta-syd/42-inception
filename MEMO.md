@@ -27,6 +27,7 @@
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
 **docker-compose up --build -dすることでDockerfileが反映される**  
 **docker containerはバックグランドでプロセスが走ってないとExit 0で正常終了してしまうためcommand: tail -f /dev/null**  
+
 参考URL:  
 	https://qiita.com/TsutomuNakamura/items/7e90e5efb36601c5bc8a  
 	https://qiita.com/yuta-ushijima/items/d3d98177e1b28f736f04  
@@ -37,6 +38,19 @@
 	https://kaki-note-02.netlify.app/2022/04/07/  
 	https://zenn.dev/hohner/articles/43a0da20181d34  
 	https://zenn.dev/torkralle/articles/388ae878cb5f8b  
+
+### What is docker network?
+	Docker内の仮想ネットワーク。Dockerコンテナが他のコンテナや外部ホスト、クライアントと通信するためにはDockerネットワークを利用する必要がある。
+参考URL:
+	https://qiita.com/TsutomuNakamura/items/ed046ee21caca4a2ffd9  
+	https://knowledge.sakura.ad.jp/23899/#namespace  
+	https://knowledge.sakura.ad.jp/26522/  
+
+#### bind mounts vs volumes  
+参考URL:  
+	https://www.atatus.com/blog/docker-volumes-vs-bind-mounts/  
+	https://w3guides.com/tutorial/docker-compose-syntax-volume-or-bind-mount  
+	https://teratail.com/questions/229090  
 
 ### What is this subject ? 
 	Use docker-compose to create LEMP ( L:Linux E:Nginx M:Mariadb P:Apache ) stack with Wordpress
@@ -102,6 +116,8 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 	https://yinm.hatenadiary.jp/entry/2017/05/04/220439  
 	https://www.softbanktech.co.jp/special/blog/it-keyword/2022/0030/#content01  
 	https://www.codeflow.site/ja/article/understanding-and-implementing-fastcgi-proxying-in-nginx  
+	https://linuc.org/study/knowledge/506/  
+	https://tooljp.com/windows/chigai/html/TCPIP/localhost-127.0.0.1-chigai.html  
 
 ### What is MariaDB?
 	MariaDBは世界でもっとも普及しているオープンソースのRDBMSであるMySQLから派生したレーショナルデータベースです。MySQLのソースコードをベースにして、新機能追加やソースコードの改善が組み込まれています。MariaDBは完全なるGPLライセンスですが、MySQLはデュアルライセンスで提供されている。 それぞれ異なる方法でスレッドプールを提供している。 MariaDBは複数のストレージエンジンに対応している。 多くのケースで、MariaDBの方が高い性能を誇る。
@@ -154,9 +170,6 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 ### What is proxy?
 	「プロキシ」とは、インターネットを接続する際に、ネットワークの内部から外部へのアクセスを代理で行うシステムのことです。プロキシサーバーとも呼ばれ、企業がサイバー攻撃などに対抗し、自社の情報システムを安全に管理する手段として利用されている。
 
-
-
-
 ### debian memo
 - 「/etc/hosts」ファイルは、ホスト名とIPアドレスを対応させるためのファイル  
 **What is PORT 80?**  
@@ -173,3 +186,10 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 - wordpress cliを導入してwordpressのセットアップを行う
 - mariadbでデータベース作成、構成をリサーチ
 - それぞれのコンテナの接続
+
+https://qiita.com/fk1/items/3ef1d989d1d5e44a1d03
+
+docker volumes
+	service内で指定したdirがvolumesに入っていく
+	/はlocalでそれ以外（変化した部分が）volumesに保存される
+	
