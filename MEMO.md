@@ -180,7 +180,9 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 - パッケージマネージャー apk  
 参考URL:
 	https://blog.stormcat.io/post/entry/alpine-entry-apk/
-
+### Internal Server Error HTTP 500 
+	Internal Server Error HTTP 500 とは、閲覧しているウェブサーバー上でエラーが起きており、ウェブサイトが正しく表示できない状態のエラーコード。
+	
 
 ### TODO
 - wordpress cliを導入してwordpressのセットアップを行う
