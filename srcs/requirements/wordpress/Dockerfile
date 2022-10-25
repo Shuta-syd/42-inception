@@ -9,5 +9,3 @@ COPY ./requirements/wordpress/conf/* /var/www/html/
 COPY ./requirements/wordpress/tools/wordpress.sh /usr/local/bin/
 
 CMD  ["./usr/local/bin/wordpress.sh"]
-
-#CMD ["/usr/sbin/php-fpm8", "-F"]
