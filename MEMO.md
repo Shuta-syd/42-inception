@@ -158,6 +158,7 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 	https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose  
 	https://make.wordpress.org/hosting/handbook/server-environment/  
 	http://www.ajisaba.net/php/php-fpm/php74-fpm_conf.html  
+	https://make.wordpress.org/hosting/handbook/server-environment/  
 
 ### What is wp-config.php?
 	wp-config.php ファイルは WordPress のインストールを行う上で最も重要なファイルの一つです。このファイルは WordPress のファイルディレクトリのルート直下に置かれ、中にはデータベース接続情報などサイトの基礎となる情報の詳細が含まれています。
@@ -182,7 +183,7 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 	https://blog.stormcat.io/post/entry/alpine-entry-apk/
 ### Internal Server Error HTTP 500 
 	Internal Server Error HTTP 500 とは、閲覧しているウェブサーバー上でエラーが起きており、ウェブサイトが正しく表示できない状態のエラーコード。
-	
+
 
 ### TODO
 - wordpress cliを導入してwordpressのセットアップを行う
