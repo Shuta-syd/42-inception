@@ -7,7 +7,7 @@ RUN apk update && apk upgrade && apk add --no-cache nginx
 #set port to use this docker image
 EXPOSE 443
 
-COPY ./requirements/nginx/conf/setup.sh /setup.sh
+COPY ./requirements/nginx/conf/setup.sh .
 
 RUN chmod 755 setup.sh
 
