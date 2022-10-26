@@ -4,10 +4,8 @@ RUN apk update && apk upgrade && apk add --no-cache php8 php8-fpm php-mysqli wge
 
 EXPOSE 9000
 
-COPY ./requirements/wordpress/conf/* /var/www/html/ 
+COPY ./requirements/wordpress/conf/ .
 
 COPY ./requirements/wordpress/tools/wordpress.sh /usr/local/bin/
 
 CMD  ["./usr/local/bin/wordpress.sh"]
-
-#CMD ["/usr/sbin/php-fpm8", "-F"]
