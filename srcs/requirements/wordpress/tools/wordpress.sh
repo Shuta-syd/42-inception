@@ -2,9 +2,9 @@
 
 #install wordpress
 wget https://wordpress.org/latest.tar.gz
-mv latest.tar.gz /var/www
-tar -xzvf /var/www/latest.tar.gz
-rm -rf /var/www/latest.tar.gz
+tar -xzvf latest.tar.gz
+rm -rf latest.tar.gz
+cp -r wordpress /var/www/
 
 #mv conf files
 rm -rf /etc/php8/php-fpm.d/www.conf

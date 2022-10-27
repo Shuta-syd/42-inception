@@ -49,6 +49,12 @@ volumes:
    type: none
    o: bind
    device: "/home/${USER}/data/wordpress/"
+ db-vol:
+  driver: local
+  driver_opts:
+   type: none
+   o: bind
+   device: "/home/${USER}/data/mariadb/"
 networks:
  wp_network:
   driver: bridge
