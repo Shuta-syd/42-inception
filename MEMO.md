@@ -196,15 +196,7 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 ### Internal Server Error HTTP 500 
 	Internal Server Error HTTP 500 とは、閲覧しているウェブサーバー上でエラーが起きており、ウェブサイトが正しく表示できない状態のエラーコード。
 
-
-### TODO
-- wordpress cliを導入してwordpressのセットアップを行う
-- mariadbでデータベース作成、構成をリサーチ
-- それぞれのコンテナの接続
-
-https://qiita.com/fk1/items/3ef1d989d1d5e44a1d03
-
-docker volumes  
+**docker volumes**  
 	service内で指定したdirがvolumesに入っていく
 	/はlocalでそれ以外（変化した部分が）volumesに保存される
 	
