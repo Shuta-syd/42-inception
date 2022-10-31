@@ -207,7 +207,10 @@ https://qiita.com/suin/items/19d65e191b96a0079417
 **The benefit of Docker compared to VMs**
 
 ## TODO
-	- open https://login.42.fr in your browser, where login is the login of the evaluated student. You shouldn't be able to access the site via http://login.42.fr.
+	- open https://login.42.fr in your browser, where login is the login of the evaluated student. You shouldn't be able to access the site via http://login.42.fr
+		https://qiita.com/na0kiB/items/a8b081fe30ff1c6d99a9
+		login.42.frにアクセスできるかは検索エンジンの/etc/hostsに127.0.0.1 login.42.frを追加する必要がある
 	- Ensure that you can add a comment using the available WordPress user.
+
 	- The evaluated student must be able to explain you how to login into the database. Try to login into the SQL database as root but with no password (no successful)
 	  https://ywork2020.com/content/sql-alter-user-identified.html
