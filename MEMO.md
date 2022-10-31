@@ -196,17 +196,18 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 ### Internal Server Error HTTP 500 
 	Internal Server Error HTTP 500 とは、閲覧しているウェブサーバー上でエラーが起きており、ウェブサイトが正しく表示できない状態のエラーコード。
 
-
-### TODO
-- wordpress cliを導入してwordpressのセットアップを行う
-- mariadbでデータベース作成、構成をリサーチ
-- それぞれのコンテナの接続
-
-https://qiita.com/fk1/items/3ef1d989d1d5e44a1d03
-
-docker volumes  
+**docker volumes**  
 	service内で指定したdirがvolumesに入っていく
 	/はlocalでそれ以外（変化した部分が）volumesに保存される
 	
 **related to Makefile**  
 https://qiita.com/suin/items/19d65e191b96a0079417  
+
+**The difference between a Docker image used with docker-compose and without docker-compose**  
+**The benefit of Docker compared to VMs**
+
+## TODO
+	- open https://login.42.fr in your browser, where login is the login of the evaluated student. You shouldn't be able to access the site via http://login.42.fr.
+	- Ensure that you can add a comment using the available WordPress user.
+	- The evaluated student must be able to explain you how to login into the database. Try to login into the SQL database as root but with no password (no successful)
+	  https://ywork2020.com/content/sql-alter-user-identified.html
