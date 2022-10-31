@@ -1,4 +1,6 @@
-all:
+NAME=inception
+
+all: $(NAME)
 	@printf "Inception Project Started...\n"
 	@make -p /home/shogura/data
 	@make -p /home/shogura/data/mariadb
