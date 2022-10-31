@@ -202,3 +202,12 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 	
 **related to Makefile**  
 https://qiita.com/suin/items/19d65e191b96a0079417  
+
+**The difference between a Docker image used with docker-compose and without docker-compose**  
+**The benefit of Docker compared to VMs**
+
+## TODO
+	- open https://login.42.fr in your browser, where login is the login of the evaluated student. You shouldn't be able to access the site via http://login.42.fr.
+	- Ensure that you can add a comment using the available WordPress user.
+	- The evaluated student must be able to explain you how to login into the database. Try to login into the SQL database as root but with no password (no successful)
+	  https://ywork2020.com/content/sql-alter-user-identified.html
