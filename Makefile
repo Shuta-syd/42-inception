@@ -1,17 +1,20 @@
 NAME=inception
 
 all: $(NAME)
+
+
+$(NAME):
 	@printf "Inception Project Started...\n"
-	@make -p /home/shogura/data
-	@make -p /home/shogura/data/mariadb
-	@make -p /home/shogura/data/wordpress
-	@docker-compose -f ./srcs/docker-compose up -d --build
+	@mkdir -p /home/shogura/data
+	@mkdir -p /home/shogura/data/mariadb
+	@mkdir -p /home/shogura/data/wordpress
+	@docker-compose -f srcs/docker-compose.yml up -d --build
 
 clean:
-	@docker-compose -f ./srcs/docker-compose down
+	@docker-compose -f srcs/docker-compose.yml down
 
 fclean: clean
 	@rm -rf /home/shogura/data/
-	@docker volume rm srcs_db-vol srcs_wp-vol
+	@docker-compose -f srcs/docker-compose.yml down --rmi all --volumes --remove-orphans
 
 .PHONY: all clean fclean
