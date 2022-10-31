@@ -7,6 +7,7 @@ RUN apk update && apk upgrade && apk add --no-cache nginx
 #set port to use this docker image
 EXPOSE 443
 
-RUN echo "127.0.0.1 shogura.42.fr" >> /etc/hosts
+COPY ./requirements/nginx/conf/setup.sh .
+RUN chmod +x setup.sh
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+CMD ["./setup.sh"]
