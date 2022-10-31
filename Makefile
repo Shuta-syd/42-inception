@@ -2,7 +2,6 @@ NAME=inception
 
 all: $(NAME)
 
-
 $(NAME):
 	@printf "Inception Project Started...\n"
 	@mkdir -p /home/shogura/data
@@ -13,8 +12,7 @@ $(NAME):
 clean:
 	@docker-compose -f srcs/docker-compose.yml down
 
-fclean: clean
-	@rm -rf /home/shogura/data/
+fclean: 
 	@docker-compose -f srcs/docker-compose.yml down --rmi all --volumes --remove-orphans
 
 .PHONY: all clean fclean
