@@ -39,6 +39,13 @@
 	https://zenn.dev/hohner/articles/43a0da20181d34  
 	https://zenn.dev/torkralle/articles/388ae878cb5f8b  
 
+# What is Docker Engine?
+	Docker EngineはDockerと同義であり、1つのコンテナしか扱えない。対して、docker-composeは複数のコンテナを扱える。
+
+参考URL:  
+	https://zenn.dev/ryoatsuta/articles/64dcc2e2b4e0cf  
+	https://o2mamiblog.com/docker-beginner-2/
+
 ### What is docker network?
 	Docker内の仮想ネットワーク。Dockerコンテナが他のコンテナや外部ホスト、クライアントと通信するためにはDockerネットワークを利用する必要がある。
 参考URL:
@@ -123,8 +130,13 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 	MariaDBは世界でもっとも普及しているオープンソースのRDBMSであるMySQLから派生したレーショナルデータベースです。MySQLのソースコードをベースにして、新機能追加やソースコードの改善が組み込まれています。MariaDBは完全なるGPLライセンスですが、MySQLはデュアルライセンスで提供されている。 それぞれ異なる方法でスレッドプールを提供している。 MariaDBは複数のストレージエンジンに対応している。 多くのケースで、MariaDBの方が高い性能を誇る。
 **What is mariadb-client?**  
 	MariaDBデータベースのクライアントアプリケーションである「mysql」を使えるようにする「mariadb-client」ソフトウェア  
-**What is PORT 3306?**
+**What is PORT 3306?**  
 	MySQLサーバーをデフォルト設定でインストールした場合に、接続のTCPポートは、3306になります。 この3306ポートは、特に何もしていない場合に、サーバーとして使用しているパソコンやサーバーが、他のマシンからのホストを遮断する設定になっています。    
+**mysqld_safe**  
+	MySQLのインスタンスはmysqldを直接起動するのではなく、mysqld_safeを経由して起動させることが推奨されている。mysqld_safeはひと言で言うとmysqldを監視しているデーモンである。
+参考URL:  
+	https://open-groove.net/mysql/mysqld-mysqldsafe/  
+
 参考URL:  
 	https://www.naka-sys.okinawa/docker-mariadb-container-create/#st-toc-h-2  
 	https://mariadb.com/kb/en/creating-a-custom-docker-image/  
@@ -192,7 +204,9 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 
 https://qiita.com/fk1/items/3ef1d989d1d5e44a1d03
 
-docker volumes
+docker volumes  
 	service内で指定したdirがvolumesに入っていく
 	/はlocalでそれ以外（変化した部分が）volumesに保存される
 	
+**related to Makefile**  
+https://qiita.com/suin/items/19d65e191b96a0079417  
