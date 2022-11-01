@@ -1,6 +1,6 @@
-FROM alpine:3.16
+FROM debian:buster
 
-RUN apk update && apk upgrade && apk add --no-cache php8 php8-fpm php8-mysqli php8-json php8-mbstring php8-tokenizer php8-phar php8-openssl php8-curl mariadb-client wget unzip 
+RUN apt-get -y update && apt-get -y upgrade && apt-get -y install php7.3 php7.3-fpm php7.3-mysql php7.3-json php7.3-mbstring php7.3-common php7.3-curl mariadb-client wget curl
 
 EXPOSE 9000
 
