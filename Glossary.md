@@ -21,7 +21,8 @@
 
 #### What is Docker image?
 	Docker imageはアプリケーションの実行に必要なソースコード、依存関係、ツールを含んだパッケージで、コンテナ作成時に指示を出す読み取り専用のテンプレート、設計書。
-	docker-composeを使用した場合、DockerHubなどを使用して複数のコンテナを一括で作成できる。対してDocker-composeを使用しなかった場合Dockerfileを使用して1つのコンテナしか作成できない。  
+	docker-composeを使用した場合、DockerHubなどを使用して複数のコンテナを一括で作成できる。対してDocker-composeを使用しなかった場合Dockerfileを使用して1つのコンテナしか作成できない。
+
 #### What is docker-compose?
 	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
 
@@ -47,4 +48,33 @@
 	HTTPサーバーとしてウェブページを提供したり、メールサーバーとして電子メールを送信したり、定期的に時刻同期を行ったりするプロセスはオペレーティングシステムではバックグラウンドプロセスと呼ばれます。
 	特にUNIX/Linuxおいて、このようなプロセスは「Daemon」(デーモン)プロセスと呼ぶ。
 
-#### 
+### What is SSL/TSL?
+	SSL（Secure Socket Layer）/ TLS（Transport Layer Security）は、通信の暗号化、Webサイトの認証を行う仕組みです。
+	現在はプロトコルとしては主にTLSが使われていますが、慣例的にTLSのことも含めてSSLと総称されています。  
+
+#### HTTP vs HTTPS
+	httpsはSSL/TSL認証がなされ、通信が暗号化されているためセキュアである。対してhttpは通信が暗号化されていないため、IDやパスワードなどもHTTP通信であれば第三者が割と苦労もせずに傍受できてしまう危険性がある。
+
+### What is nginx?
+	nginxはオープンソースのWebサーバーの一種。Webサーバーとは静的コンテンツや動的コンテンツを提供するサーバ（常駐プログラム）。
+
+### What is reverse proxy?
+	プロキシとは、代理で通信を中継する機能や役割をもつサーバー。
+	リバースプロキシはインターネットとサーバーの間に立ち、ユーザーからのリクエストを一手に引き受け、サーバーへリクエストを送信する役割である。
+	サーバーの負荷軽減やセキュリティ対策として利用されるものであり、増加するトラフィックをより効率的に処理するために活用される。
+
+### What is MariaDB?
+	MariaDBは世界でもっとも普及しているオープンソースのRDBMSであるMySQLから派生したレーショナルデータベース。
+	MySQLのソースコードをベースにして、新機能追加やソースコードの改善が組み込まれている。MariaDBは複数のストレージエンジンに対応している。 多くのケースで、MariaDBの方が高い性能を誇る。
+
+#### What is mysql_safe?
+	mysqld_safe は、Unix で mysqld サーバーを起動するための推奨される方法。
+	/etc/init.d/mysql startを実行した時というのは、mysqldがダイレクトに起動しているのではなく、mysqld_safe内で起動している。つまり、mysqld_safeが内部でmysqldを実行しているのである
+
+	参考URL: https://open-groove.net/mysql/mysqld-mysqldsafe/
+
+### What is PHP-FPM?
+	PM ( FastCGI Process Manager ) は PHP の FastCGI 実装のひとつで、 主に高負荷のサイトで有用な追加機能がある。
+	CGIとは、Webサーバが、Webブラウザなどからの要求に応じてプログラムを実行する仕組みの1つ。
+
+

@@ -218,3 +218,7 @@ https://qiita.com/suin/items/19d65e191b96a0079417
 	VMsと違ってDockerはインフラ環境をコード化することができるため、組織での環境構築、共有が楽になる。ゲストOSが入らないため余計なメモリを食わない。  
 	https://and-engineer.com/articles/YaJcFRIAAB4AiFgz#heading3-5  
 	https://duckduckgo.com/?q=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E5%9E%8B+%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%90%E3%82%A4%E3%82%B6%E3%83%BC%E5%9E%8B&atb=v347-5vb&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fsonnaka.com%2Fwp-content%2Fuploads%2F2021%2F06%2Ff58a0771e2f8f9cebfd2a3180f88a05b.png  
+
+### FAQ
+- nginxを使用すればHerokuなどサードパーティ製のサーバをしようしないでWebアプリなどを公開できるのか？また公開する際IPアドレスやURLの権限はどこから持ってくるのか？
+- 
