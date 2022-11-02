@@ -9,4 +9,5 @@
 	それに対してDockerはOSを仮想化するのがコンテナであり、コードと依存関係の両方を格納することができるアプリレイヤーにある仮想空間で、同じマシン上で、複数のコンテナを個別に実行することができる。その結果、通常、容量を抑えることができる。
 
 ### Hypervisor vs Container
-	![container_vs_hypervisor](https://image.itmedia.co.jp/enterprise/articles/1506/08/kz_its01.jpg)
+
+![container_vs_hypervisor](https://image.itmedia.co.jp/enterprise/articles/1506/08/kz_its01.jpg)
