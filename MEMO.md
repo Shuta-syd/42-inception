@@ -227,8 +227,3 @@ https://qiita.com/suin/items/19d65e191b96a0079417
 		
 	- The evaluated student must be able to explain you how to login into the database. Try to login into the SQL database as root but with no password (no successful)
 	  https://ywork2020.com/content/sql-alter-user-identified.html
-
-ToDo  
-wordpress 初期表示 installじゃない
-localhost:80アクセスできないようにする
-wordpress admin account create 
