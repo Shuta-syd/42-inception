@@ -12,7 +12,8 @@ $(NAME):
 clean:
 	@docker-compose -f srcs/docker-compose.yml down
 
-fclean: 
+fclean:
+	@sudo rm -rf ../data	
 	@docker-compose -f srcs/docker-compose.yml down --rmi all --volumes --remove-orphans
 
 .PHONY: all clean fclean
