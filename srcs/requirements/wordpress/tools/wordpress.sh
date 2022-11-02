@@ -19,12 +19,13 @@ rm -rf /var/www/wordpress/wp-config-sample.php
 mv  ./wp-config.php /var/www/wordpress/wp-config.php
 
 #install wp-cli
-if [ -f /usr/local/bin/wp-cli.phar ]; then
+if [ -f /usr/local/bin/wp ]; then
 	echo "wp-cli is already exist"
 else
 	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 	chmod 755 wp-cli.phar
 	mv wp-cli.phar /usr/local/bin/wp
+	echo "[DONE] wp-cli installed"
 fi
 
 #setup wp-cli wordpress
