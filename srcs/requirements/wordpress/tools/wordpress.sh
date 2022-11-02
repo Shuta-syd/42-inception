@@ -24,9 +24,7 @@ if [ -f /usr/local/bin/wp-cli.phar ]; then
 else
 	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 	chmod 755 wp-cli.phar
-	mkdir -p /usr/local/bin/wp
-	chmod 777 /usr/local/bin/wp
-	mv wp-cli.phar /usr/local/bin/wp/
+	mv wp-cli.phar /usr/local/bin/wp
 fi
 
 #setup wp-cli wordpress
