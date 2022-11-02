@@ -16,7 +16,8 @@
 	Dockerfileとは、新規にDockerイメージを作成するための手順を記したテキストファイル。Dockerイメージの設計図。Dockerfileは独自のDSL（ドメイン固有言語）。  
 **Dockerfile内で相対パスを使用する場合、docker-compose.yml build contextで指定したdirからの相対パスを使用する必要がある**  
 #### What is difference between CMD and ENTRYPOINT ?
-	CMD -> コンテナ開始時（＝docker start時） ENTRYPOINT -> 作成時（＝docker run時）に実行されます。  
+	コンテナで必ず実行したいコマンドや引数を「ENTRYPOINT」命令に、デフォルトの引数や推奨パラメータを「CMD」命令に書いて使い分けられます
+
 参考URL:  
 	https://y-ohgi.com/introduction-docker/2_component/dockerfile/  
 	https://www.youtube.com/watch?v=LQjaJINkQXY  
@@ -39,6 +40,11 @@
 	https://zenn.dev/hohner/articles/43a0da20181d34  
 	https://zenn.dev/torkralle/articles/388ae878cb5f8b  
 
+# What is Docker image?
+	docker imageは、コンテナに必要なファイル郡をひとまとめにしたやつ、読み専用なレイヤーが重なってできてる、設計書。
+
+**The difference between a Docker image used with docker-compose and without docker-compose**  
+	docker-composeを使用した場合、DockerHubなどを使用して複数のコンテナを一括で作成できる。対してDocker-composeを使用しなかった場合Dockerfileを使用して1つのコンテナしか作成できない。  
 # What is Docker Engine?
 	Docker EngineはDockerと同義であり、1つのコンテナしか扱えない。対して、docker-composeは複数のコンテナを扱える。
 
@@ -48,6 +54,10 @@
 
 ### What is docker network?
 	Docker内の仮想ネットワーク。Dockerコンテナが他のコンテナや外部ホスト、クライアントと通信するためにはDockerネットワークを利用する必要がある。
+
+### What are bridge network and host network?
+	https://knowledge.sakura.ad.jp/23899/#Docker3
+
 参考URL:
 	https://qiita.com/TsutomuNakamura/items/ed046ee21caca4a2ffd9  
 	https://knowledge.sakura.ad.jp/23899/#namespace  
@@ -203,8 +213,11 @@ https://shiro-secret-base.com/?p=468#PHP-fpm-2
 **related to Makefile**  
 https://qiita.com/suin/items/19d65e191b96a0079417  
 
-**The difference between a Docker image used with docker-compose and without docker-compose**  
-**The benefit of Docker compared to VMs**
+
+**The benefit of Docker compared to VMs**  
+	VMsと違ってDockerはインフラ環境をコード化することができるため、組織での環境構築、共有が楽になる。ゲストOSが入らないため余計なメモリを食わない。  
+	https://and-engineer.com/articles/YaJcFRIAAB4AiFgz#heading3-5  
+	https://duckduckgo.com/?q=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E5%9E%8B+%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%90%E3%82%A4%E3%82%B6%E3%83%BC%E5%9E%8B&atb=v347-5vb&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fsonnaka.com%2Fwp-content%2Fuploads%2F2021%2F06%2Ff58a0771e2f8f9cebfd2a3180f88a05b.png  
 
 ## TODO
 	- open https://login.42.fr in your browser, where login is the login of the evaluated student. You shouldn't be able to access the site via http://login.42.fr
@@ -214,3 +227,8 @@ https://qiita.com/suin/items/19d65e191b96a0079417
 		
 	- The evaluated student must be able to explain you how to login into the database. Try to login into the SQL database as root but with no password (no successful)
 	  https://ywork2020.com/content/sql-alter-user-identified.html
+
+ToDo  
+wordpress 初期表示 installじゃない
+localhost:80アクセスできないようにする
+wordpress admin account create 
