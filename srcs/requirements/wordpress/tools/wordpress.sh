@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #install wordpress
-if [ -d /var/www/wordpress ]; then 
+if [ -d /var/www/wordpress ]; then
 	echo "wordpress dir is already exist"
 else
 	wget https://wordpress.org/latest.tar.gz
@@ -22,13 +22,16 @@ mv  ./wp-config.php /var/www/wordpress/wp-config.php
 if [ -f /usr/local/bin/wp-cli.phar ]; then
 	echo "wp-cli is already exist"
 else
-	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar 
+	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 	chmod 755 wp-cli.phar
 	mkdir -p /usr/local/bin/wp
 	chmod 777 /usr/local/bin/wp
 	mv wp-cli.phar /usr/local/bin/wp/
 fi
 
+#setup wp-cli wordpress
+wp core --allow-root install --path=/var/www/wordpress --url=https://shogura.42.fr --title=inception --admin_user=root_ad --admin_password=root --admin_email="shogura@student.42tokyo.jp"
+wp user create --allow-root shogura   shogura@42tokyo.com --user_pass=shogura  --path=/var/www/wordpress
 
 #start php8-fpm
 mkdir -p /run/php
