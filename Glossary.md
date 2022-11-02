@@ -36,3 +36,11 @@ docker-composeを使用した場合、DockerHubなどを使用して複数のコ
 
 #### The difference between a Docker image used with docker-compose and without docker-compose
 	docker-composeを使用した場合、DockerHubなどを使用して複数のコンテナを一括で作成できる。対してDocker-composeを使用しなかった場合Dockerfileを使用して1つのコンテナしか作成できない。  
+
+#### What is Docker Network?
+	Docker内の仮想ネットワーク。Dockerコンテナが他のコンテナや外部ホスト、クライアントと通信するためにはDockerネットワークを利用する必要がある。デフォルトでbridge,none, hostの3つのネットワークが作成されている。
+
+#### What is Daemon process?
+	HTTPサーバーとしてウェブページを提供したり、メールサーバーとして電子メールを送信したり、定期的に時刻同期を行ったりするプロセスはオペレーティングシステムではバックグラウンドプロセスと呼ばれます。特にUNIX/Linuxおいて、このようなプロセスは「Daemon」(デーモン)プロセスと呼ぶ。
+
+#### 
