@@ -36,6 +36,12 @@
 
 	※ Dockerfile内で相対パスを使用する場合、docker-compose.yml build contextで指定したdirからの相対パスを使用する必要がある
 
+#### What is difference between "ports" in docker-compose.yml and "EXPOSE" in Dockerfile?
+	Dockerfileにてexposeされたポートは、同じネットワークに接続されている他のサービスからはアクセスできますが、ホストマシン上では公開されない。
+	対して、docker-compose.ymlでのportsはホストマシン上で公開される。
+
+	参考URL: https://www.baeldung.com/ops/docker-compose-expose-vs-ports
+
 #### What is Docker Hub?
 	Docker Hubは、コンテナイメージを検索・共有できるプラットフォーム。
 	コミュニティ開発者、オープンソースプロジェクト、独立系ソフトウェアベンダー（ISV）提供のリソースにアクセスできる、世界最大のコンテナイメージのリポジトリ。
