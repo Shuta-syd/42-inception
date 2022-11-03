@@ -36,6 +36,13 @@
 
 	※ Dockerfile内で相対パスを使用する場合、docker-compose.yml build contextで指定したdirからの相対パスを使用する必要がある
 
+#### CMD vs ENTRYPOINT in Dockerfile
+	- ENTRYPOINTは--entrypointオプションを使用しない限り書き換えられない
+	- CMDは`docker run [cmd]`でオーバーライドできる
+	- ENTRYPOINT、CMD両方を使用した場合`ENTRYPOINT CMD`の順でCMDがオプション（引数）のような扱いになる （shell, exec形式が混ざると反映されない）
+	
+	参考URL: https://qiita.com/hnakamur/items/afddaa3dbe48ad2b8b5c https://www.creationline.com/lab/39730
+
 #### What is difference between "ports" in docker-compose.yml and "EXPOSE" in Dockerfile?
 	Dockerfileにてexposeされたポートは、同じネットワークに接続されている他のサービスからはアクセスできますが、ホストマシン上では公開されない。
 	対して、docker-compose.ymlでのportsはホストマシン上で公開される。
@@ -107,4 +114,3 @@
 	UNIXドメインソケット（英: UNIX domain socket）や IPCソケット とは、単一のオペレーティングシステム内で実行されるプロセス間でデータを交換するためのデータ通信の終点
 
 	参考URL: https://qiita.com/toshihirock/items/b643ed0edd30e6fd1f14
-

@@ -16,7 +16,11 @@
 	Dockerfileとは、新規にDockerイメージを作成するための手順を記したテキストファイル。Dockerイメージの設計図。Dockerfileは独自のDSL（ドメイン固有言語）。  
 **Dockerfile内で相対パスを使用する場合、docker-compose.yml build contextで指定したdirからの相対パスを使用する必要がある**  
 #### What is difference between CMD and ENTRYPOINT ?
-	コンテナで必ず実行したいコマンドや引数を「ENTRYPOINT」命令に、デフォルトの引数や推奨パラメータを「CMD」命令に書いて使い分けられます
+	- ENTRYPOINTは--entrypointオプションを使用しない限り書き換えられない
+	- CMDは`docker run [cmd]`でオーバーライドできるため、ユーザーフレンドリー
+	- ENTRYPOINT、CMD両方を使用した場合`ENTRYPOINT CMD`の順でCMDがオプション（引数）のような扱いになる (EXEC形式のみ)
+	- Shell形式の場合CMDもシェル形式であれば引数と扱うことが可能
+	- 
 
 参考URL:  
 	https://y-ohgi.com/introduction-docker/2_component/dockerfile/  
@@ -219,6 +223,4 @@ https://qiita.com/suin/items/19d65e191b96a0079417
 	https://and-engineer.com/articles/YaJcFRIAAB4AiFgz#heading3-5  
 	https://duckduckgo.com/?q=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E5%9E%8B+%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%90%E3%82%A4%E3%82%B6%E3%83%BC%E5%9E%8B&atb=v347-5vb&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fsonnaka.com%2Fwp-content%2Fuploads%2F2021%2F06%2Ff58a0771e2f8f9cebfd2a3180f88a05b.png  
 
-### FAQ
-- nginxを使用すればHerokuなどサードパーティ製のサーバをしようしないでWebアプリなどを公開できるのか？また公開する際IPアドレスやURLの権限はどこから持ってくるのか？
 - 
