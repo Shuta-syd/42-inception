@@ -1,34 +1,81 @@
-### Mandatory
-各Dockerイメージは、対応するサービスと同じ名前である必要があります。  
-各サービスは専用のコンテナで実行する必要がある  
-パフォーマンス上の問題から、コンテナはAlpine Linuxの最後の安定版か、Debian Busterのどちらかでビルドする必要があります。選択はあなた次第です。  
-また、1サービスにつき1つ、独自のDockerfileを記述する必要があります。Dockerfilesは は、docker-compose.ymlの中でMakefileから呼び出される必要があります。  
-そして、既製のDockerイメージを引っ張ってくることも、DockerHubなどのサービスを利用することも禁じられています。    
-セットアップ事項:  
-1. TLSv1.2またはTLSv1.3のみのNGINXを格納したDockerコンテナです。  
-2. WordPress + php-fpm（インストールと設定が必要）を格納したDockerコンテナです。nginx を含まないコンテナです。  
-3. nginxを使わずにMariaDBだけを入れたDockerコンテナ  
-4. WordPressのデータベースを格納するボリューム  
-5. WordPressのウェブサイトファイルが格納されている2番目のボリューム  
-6. コンテナ間の接続を確立するDocker-Network    
-7. コンテナはクラッシュした場合、再起動する必要があります。 
-8. WordPressのデータベースには、2人のユーザーが存在し、そのうち1人が管理者である必要があります。管理者のユーザー名には admin/Admin や administrator Administrator を含めることはできません（例: admin, administrator, Administrator, admin-123 など)。 
-9. より簡単にするために、ドメイン名があなたのローカルIPアドレスを指すように設定する必要があります。このドメイン名はlogin.42.frでなければなりません。ここでも、あなた自身のログインを使用する必要があります。例えば、ログインがwilの場合、wil.42.frはwilのウェブサイトを指すIPアドレスにリダイレクトされます。
+### What is Docker?
+	Dockerとはコンテナ技術を使用して、アプリケーションの環境構築を容易にするオープンソースソフトウェア。  
+	ミドルウェアのインストールや各種環境設定をコード化して管理でき、共有などが容易になる。
+	
+	Dockerでは、ソフトウェア開発に利用可能なアプリケーションを標準化された単位にパッケージ化することができます。この単位（コンテナ）には、アプリケーションのコードと依存関係が含まれているため、どのようなコンピューティング環境でも簡単に実行できる
 
+#### What are benefits of Docker over VMs?
+	VMには、OSとアプリケーションの完全なコピーに加え、必要なバイナリやライブラリも格納されるため、コンピュータ上で数十GB近くの容量を占めてしまうことがあります。また、ゲストOS用にハードウェアを仮想化すると、かなりのオーバーヘッドが発生することがある。
+	それに対してDockerはOSを仮想化するのがコンテナであり、コードと依存関係の両方を格納することができるアプリレイヤーにある仮想空間で、同じマシン上で、複数のコンテナを個別に実行することができる。その結果、通常、容量を抑えることができる。
 
-### NOTICE
-もちろん、network: hostや-link、links:の使用は禁止されています。  
-docker-compose.yml ファイルに network 行が存在する必要があります。コンテナを起動する際に、無限ループするようなコマンドを使用してはいけません。  
-これは、エントリポイントとして使用されるすべてのコマンド、エントリーポイントスクリプトで使用されるコマンドにも適用されます。  
-以下、禁止されているハックパッチをいくつか紹介します。 tail -f, bash, sleep infinity, while true。  
-最新のタグは禁止されています。  
-Dockerfilesにパスワードが存在してはいけません。  
-環境変数の使用は必須です。  
-また、.env ファイルを使用して環境変数を保存することを強くお勧めします  
-.envファイルは、srcsディレクトリのルートに配置する必要があります。  
-NGINXコンテナは、TLSv1.2またはTLSv1.3プロトコルを使用して、ポート443のみを経由してインフラストラクチャに入る唯一のエントリーポイントである必要があります。プロトコルを使用する必要があります。  
+#### Hypervisor vs Container
+	ハイパーバイザ型はハイパーバイザにゲストOSをインストールし、物理マシンのメモリやプロセッサを仮想的に割り当てることで物理マシン上にあたかも複数のOSが起動してるかのような状態を作り出す仮想化技術。
+	対してコンテナ型はアプリケーションを実行するための領域（ユーザ空間）を複数に分割して利用する仮想化技術である。
+	ハイパーバイザ型はホストOSに依存しないが、コンテナ型はホストOSに依存しており、同じOS上で実現するので、全てのコンテナは同じOSしか使えない。
+	コンテナは、ハイパーバイザのように、個別にCPUやメモリ、ストレージなどを割り当てる必要がないためシステム資源のオーバーヘッド（仮想化のために割り当てられる資源や能力）が少なく済む。
 
-### INFO
-Dockerコンテナは仮想マシンではありません。したがって、実行しようとするときに 'tail -f' などに基づくハッキングパッチを使用することはお勧めしません。デーモンがどのように機能するのか、そしてそれを使うのが良いのかどうかについては、こちらをお読みください。  
-PID 1とDockerfilesの書き方のベストプラクティスについてお読みください。  
-ホストマシンの/home/login/dataフォルダに、Dockerで作成したボリュームがに格納されます。もちろん、ログインは自分のものに置き換えてください。  
+![container_vs_hypervisor](https://image.itmedia.co.jp/enterprise/articles/1506/08/kz_its01.jpg)
+
+#### Is it possible to set up a linux environment on MacOS using Docker?
+	DockerはLinuxコンテナの技術を活用しており、親OSはLinuxに限られる。	MacOSはLinuxではないためDockerは動作しないが、Docker for Macというソフトウェアを使用することでDockerを使用している。
+	Docker for Macでは、Macにデフォルトで入っている仮想化ツール「HyperKit」を使ってMacで仮想マシンを立ち上げ、Linuxを起動しています。それによって、Mac上にDockerホストを作成している。
+	
+	参考URL: https://teratail.com/questions/142866 https://qiita.com/nogizaka46/items/c48728d6c640a3e9d6aa
+
+#### What is Docker image?
+	Docker imageはアプリケーションの実行に必要なソースコード、依存関係、ツールを含んだパッケージで、コンテナ作成時に指示を出す読み取り専用のテンプレート、設計書。
+	docker-composeを使用した場合、DockerHubなどを使用して複数のコンテナを一括で作成できる。対してDocker-composeを使用しなかった場合Dockerfileを使用して1つのコンテナしか作成できない。
+
+#### What is docker-compose?
+	複数のコンテナから成るサービスを構築・実行する手順を自動的にし、管理を容易にする機能。Docker compose では、compose ファイルを用意してコマンドを1 回実行することで、そのファイルから設定を読み込んですべてのコンテナサービスを起動することができる。  
+
+	※ docker containerはバックグランドでプロセスが走ってないとExit 0で正常終了してしまうためcommand: tail -f /dev/null
+
+#### What is Dockerfile?
+	Dockerfileとは、新規にDockerイメージを作成するための手順を記したテキストファイル。Dockerイメージの設計図。Dockerfileは独自のDSL（ドメイン固有言語）。  
+
+	※ Dockerfile内で相対パスを使用する場合、docker-compose.yml build contextで指定したdirからの相対パスを使用する必要がある
+
+#### What is Docker Hub?
+	Docker Hubは、コンテナイメージを検索・共有できるプラットフォーム。
+	コミュニティ開発者、オープンソースプロジェクト、独立系ソフトウェアベンダー（ISV）提供のリソースにアクセスできる、世界最大のコンテナイメージのリポジトリ。
+
+#### The difference between a Docker image used with docker-compose and without docker-compose
+	docker-composeを使用した場合、DockerHubなどを使用して複数のコンテナを一括で作成できる。対してDocker-composeを使用しなかった場合Dockerfileを使用して1つのコンテナしか作成できない。  
+
+#### What is Docker Network?
+	Docker内の仮想ネットワーク。Dockerコンテナが他のコンテナや外部ホスト、クライアントと通信するためにはDockerネットワークを利用する必要がある。
+	デフォルトでbridge,none, hostの3つのネットワークが作成されている。
+
+#### What is Daemon process?
+	HTTPサーバーとしてウェブページを提供したり、メールサーバーとして電子メールを送信したり、定期的に時刻同期を行ったりするプロセスはオペレーティングシステムではバックグラウンドプロセスと呼ばれます。
+	特にUNIX/Linuxおいて、このようなプロセスは「Daemon」(デーモン)プロセスと呼ぶ。
+
+### What is SSL/TSL?
+	SSL（Secure Socket Layer）/ TLS（Transport Layer Security）は、通信の暗号化、Webサイトの認証を行う仕組みです。
+	現在はプロトコルとしては主にTLSが使われていますが、慣例的にTLSのことも含めてSSLと総称されています。  
+
+#### HTTP vs HTTPS
+	httpsはSSL/TSL認証がなされ、通信が暗号化されているためセキュアである。対してhttpは通信が暗号化されていないため、IDやパスワードなどもHTTP通信であれば第三者が割と苦労もせずに傍受できてしまう危険性がある。
+
+### What is nginx?
+	nginxはオープンソースのWebサーバーの一種。Webサーバーとは静的コンテンツや動的コンテンツを提供するサーバ（常駐プログラム）。
+
+### What is reverse proxy?
+	プロキシとは、代理で通信を中継する機能や役割をもつサーバー。
+	リバースプロキシはインターネットとサーバーの間に立ち、ユーザーからのリクエストを一手に引き受け、サーバーへリクエストを送信する役割である。
+	サーバーの負荷軽減やセキュリティ対策として利用されるものであり、増加するトラフィックをより効率的に処理するために活用される。
+
+### What is MariaDB?
+	MariaDBは世界でもっとも普及しているオープンソースのRDBMSであるMySQLから派生したレーショナルデータベース。
+	MySQLのソースコードをベースにして、新機能追加やソースコードの改善が組み込まれている。MariaDBは複数のストレージエンジンに対応している。 多くのケースで、MariaDBの方が高い性能を誇る。
+
+#### What is mysql_safe?
+	mysqld_safe は、Unix で mysqld サーバーを起動するための推奨される方法。
+	/etc/init.d/mysql startを実行した時というのは、mysqldがダイレクトに起動しているのではなく、mysqld_safe内で起動している。つまり、mysqld_safeが内部でmysqldを実行しているのである
+
+	参考URL: https://open-groove.net/mysql/mysqld-mysqldsafe/
+
+### What is PHP-FPM?
+	PM ( FastCGI Process Manager ) は PHP の FastCGI 実装のひとつで、 主に高負荷のサイトで有用な追加機能がある。
+	CGIとは、Webサーバが、Webブラウザなどからの要求に応じてプログラムを実行する仕組みの1つ。
