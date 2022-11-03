@@ -99,6 +99,12 @@
 	プールディレクティブは PHP-FPM の規約で、複数の子プロセスを "プール" として起動し、それぞれを異なる設定で使用できるようにするもの。
 	プールディレクティブファイルのデフォルト名は www.conf。要するにphp-fpmに関する設定を行うファイル。
 
+	listen: リクエストを待ち受けるポート or UNIX ドメインソケットを指定します。
+
 	参考URL: https://stackoverflow.com/questions/39054500/what-is-www-conf
 
+#### What is UNIX domain socket?
+	UNIXドメインソケット（英: UNIX domain socket）や IPCソケット とは、単一のオペレーティングシステム内で実行されるプロセス間でデータを交換するためのデータ通信の終点
+
+	参考URL: https://qiita.com/toshihirock/items/b643ed0edd30e6fd1f14
 
