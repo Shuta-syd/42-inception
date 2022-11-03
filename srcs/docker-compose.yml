@@ -17,13 +17,11 @@ services:
   networks:
    - wp_network
  mariadb:
-  build: 
+  build:
    context: .
    dockerfile: requirements/mariadb/Dockerfile
-  container_name: mariadb 
+  container_name: mariadb
   env_file: .env
-  ports:
-   - "3306:3306"
   volumes:
    - db-vol:/var/lib/mysql
   restart: always
@@ -33,14 +31,12 @@ services:
   build:
    context: .
    dockerfile: requirements/wordpress/Dockerfile
-  container_name: wordpress 
+  container_name: wordpress
   depends_on:
    - mariadb
   env_file: .env
   volumes:
    - wp-vol:/var/www/
-  ports:
-   - "9000:9000"
   restart: always
   networks:
    - wp_network
