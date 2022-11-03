@@ -72,6 +72,11 @@
 	リバースプロキシはインターネットとサーバーの間に立ち、ユーザーからのリクエストを一手に引き受け、サーバーへリクエストを送信する役割である。
 	サーバーの負荷軽減やセキュリティ対策として利用されるものであり、増加するトラフィックをより効率的に処理するために活用される。
 
+#### What is "location" directive in nginx.conf?
+	URIのパス毎の設定を記述するためのディレクティブ。
+
+	参考URL: https://qiita.com/yutaroud/items/d324a82524501777f464
+
 ### What is MariaDB?
 	MariaDBは世界でもっとも普及しているオープンソースのRDBMSであるMySQLから派生したレーショナルデータベース。
 	MySQLのソースコードをベースにして、新機能追加やソースコードの改善が組み込まれている。MariaDBは複数のストレージエンジンに対応している。 多くのケースで、MariaDBの方が高い性能を誇る。
@@ -85,3 +90,15 @@
 ### What is PHP-FPM?
 	PM ( FastCGI Process Manager ) は PHP の FastCGI 実装のひとつで、 主に高負荷のサイトで有用な追加機能がある。
 	CGIとは、Webサーバが、Webブラウザなどからの要求に応じてプログラムを実行する仕組みの1つ。
+
+#### What is "wp-config.php" ?
+	wp-config.php ファイルは WordPress のインストールを行う上で最も重要なファイルの1つ。
+	このファイルは WordPress のファイルディレクトリのルート直下に置かれ、中にはデータベース接続情報などサイトの基礎となる情報の詳細が含まれている。
+
+#### What is "www.conf"?
+	プールディレクティブは PHP-FPM の規約で、複数の子プロセスを "プール" として起動し、それぞれを異なる設定で使用できるようにするもの。
+	プールディレクティブファイルのデフォルト名は www.conf。要するにphp-fpmに関する設定を行うファイル。
+
+	参考URL: https://stackoverflow.com/questions/39054500/what-is-www-conf
+
+
