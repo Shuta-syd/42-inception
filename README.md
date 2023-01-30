@@ -3,7 +3,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Inception</h3>
+<h1 align="center">
+	Inception
+</h1>
 
   <p align="center">
     <br />
